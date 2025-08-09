@@ -61,6 +61,7 @@
 html {
     scroll-behavior: smooth;
     font-size: var(--font-size-base);
+    scroll-padding-top: 80px; /* Espacio para el header fijo */
 }
 
 body {

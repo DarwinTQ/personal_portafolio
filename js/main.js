@@ -22,10 +22,30 @@ hamburger.addEventListener('click', () => {
 
 // Cerrar menú al hacer click en un enlace
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        // Si es un enlace de navegación interna
+        if (link.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const target = link.getAttribute('href');
+            smoothScrollTo(target);
+        }
+        
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
     });
+});
+
+// Scroll suave para todos los enlaces con clase smooth-scroll
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.smooth-scroll')) {
+        e.preventDefault();
+        const link = e.target.closest('.smooth-scroll');
+        const target = link.getAttribute('href');
+        
+        if (target.startsWith('#')) {
+            smoothScrollTo(target);
+        }
+    }
 });
 
 // Navegación suave y scroll activo
@@ -260,7 +280,13 @@ function closeNotification(notification) {
 function smoothScrollTo(target) {
     const element = document.querySelector(target);
     if (element) {
-        const offsetTop = element.offsetTop - 80; // Ajuste para header fijo
+        // Ajuste especial para la sección home para que muestre desde el inicio
+        let offsetTop;
+        if (target === '#home') {
+            offsetTop = 0; // Ir al inicio de la página
+        } else {
+            offsetTop = element.offsetTop - 80; // Ajuste para header fijo en otras secciones
+        }
         
         window.scrollTo({
             top: offsetTop,

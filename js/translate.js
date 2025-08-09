@@ -63,7 +63,7 @@ var translations = {
         "nav_contact": "Contact",
 
         // Hero Section
-        "hero_hello": "Hi, I'm Darwin Turpo",
+        "hero_hello": "Hi there, I'm Darwin Turpo",
         "hero_title": "Full Stack Web Developer",
         "hero_description": "Creating incredible digital experiences with clean code and modern designs.",
         "hero_projects": "View Projects",
