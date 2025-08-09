@@ -280,12 +280,12 @@ function closeNotification(notification) {
 function smoothScrollTo(target) {
     const element = document.querySelector(target);
     if (element) {
-        // Ajuste especial para la sección home para que muestre desde el inicio
+        // Todas las secciones se muestran completas desde su inicio
         let offsetTop;
         if (target === '#home') {
-            offsetTop = 0; // Ir al inicio de la página
+            offsetTop = 0; // Inicio de la página para home
         } else {
-            offsetTop = element.offsetTop - 80; // Ajuste para header fijo en otras secciones
+            offsetTop = element.offsetTop; // Inicio exacto de cada sección
         }
         
         window.scrollTo({

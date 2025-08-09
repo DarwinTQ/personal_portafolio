@@ -61,7 +61,7 @@
 html {
     scroll-behavior: smooth;
     font-size: var(--font-size-base);
-    scroll-padding-top: 80px; /* Espacio para el header fijo */
+    scroll-padding-top: 0px; /* Sin padding para permitir ventanas completas */
 }
 
 body {
@@ -421,6 +421,8 @@ button {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 80px; /* Compensar el header fijo */
+    box-sizing: border-box;
 }
 
 .about .container {
@@ -485,6 +487,8 @@ button {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 80px; /* Compensar el header fijo */
+    box-sizing: border-box;
 }
 
 .skills .container {
@@ -584,6 +588,8 @@ button {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 80px; /* Compensar el header fijo */
+    box-sizing: border-box;
 }
 
 .projects .container {
@@ -710,6 +716,8 @@ button {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 80px; /* Compensar el header fijo */
+    box-sizing: border-box;
 }
 
 .contact .container {
