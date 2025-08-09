@@ -65,8 +65,89 @@ class TypeWriter {
     }
 }
 
+// ============================================
+// EFECTO DE ESCRITURA UNA SOLA VEZ
+// ============================================
+
+class OneTimeTypeWriter {
+    constructor(element, textParts, options = {}) {
+        this.element = element;
+        this.textParts = textParts; // Array de partes del texto
+        this.currentPartIndex = 0;
+        this.letterIndex = 0;
+        this.typeSpeed = options.typeSpeed || 100;
+        this.showCursor = options.showCursor !== false;
+        
+        // Limpiar el contenido inicial
+        this.element.innerHTML = '';
+        this.type();
+    }
+    
+    type() {
+        if (this.currentPartIndex < this.textParts.length) {
+            const currentPart = this.textParts[this.currentPartIndex];
+            
+            if (this.letterIndex < currentPart.text.length) {
+                const currentChar = currentPart.text[this.letterIndex];
+                
+                // Construir el HTML actual
+                let html = '';
+                
+                // Agregar partes ya completadas
+                for (let i = 0; i < this.currentPartIndex; i++) {
+                    const part = this.textParts[i];
+                    if (part.isHighlight) {
+                        html += `<span class="highlight">${part.text}</span>`;
+                    } else {
+                        html += part.text;
+                    }
+                }
+                
+                // Agregar parte actual en progreso
+                const currentText = currentPart.text.substring(0, this.letterIndex + 1);
+                if (currentPart.isHighlight) {
+                    html += `<span class="highlight">${currentText}</span>`;
+                } else {
+                    html += currentText;
+                }
+                
+                // Agregar cursor
+                if (this.showCursor) {
+                    html += '<span class="cursor">|</span>';
+                }
+                
+                this.element.innerHTML = html;
+                this.letterIndex++;
+                setTimeout(() => this.type(), this.typeSpeed);
+            } else {
+                // Parte actual completa, pasar a la siguiente
+                this.currentPartIndex++;
+                this.letterIndex = 0;
+                setTimeout(() => this.type(), this.typeSpeed);
+            }
+        } else {
+            // Todo el texto escrito, solo mostrar cursor parpadeando
+            let finalHtml = '';
+            this.textParts.forEach(part => {
+                if (part.isHighlight) {
+                    finalHtml += `<span class="highlight">${part.text}</span>`;
+                } else {
+                    finalHtml += part.text;
+                }
+            });
+            
+            if (this.showCursor) {
+                finalHtml += '<span class="cursor blinking">|</span>';
+            }
+            
+            this.element.innerHTML = finalHtml;
+        }
+    }
+}
+
 // Inicializar efecto de escritura
 document.addEventListener('DOMContentLoaded', () => {
+    // Efecto de escritura cíclico para el subtítulo
     const heroSubtitle = document.querySelector('.hero-content h2');
     if (heroSubtitle) {
         const titles = [
@@ -76,6 +157,17 @@ document.addEventListener('DOMContentLoaded', () => {
             'Solucionador de Problemas'
         ];
         new TypeWriter(heroSubtitle, titles);
+    }
+    
+    // Efecto de escritura una sola vez para el título principal
+    const heroTitle = document.querySelector('.hero-content h1');
+    if (heroTitle) {
+        const textParts = [
+            { text: 'Hola, soy ', isHighlight: false },
+            { text: 'Darwin Turpo', isHighlight: true }
+        ];
+        
+        new OneTimeTypeWriter(heroTitle, textParts, { typeSpeed: 80 });
     }
 });
 

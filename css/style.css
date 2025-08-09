@@ -397,12 +397,18 @@ button {
 #profile-img {
     width: 220px;
     height: 220px;
-    border-radius: 50%;
+    border-radius: 300px;
     object-fit: cover;
     border: 5px solid rgba(255, 255, 255, 0.2);
     box-shadow: var(--shadow-large);
     display: block;
     margin: 0 auto;
+    /* Mantener tamaño fijo en todos los dispositivos */
+    min-width: 220px;
+    min-height: 220px;
+    max-width: 220px;
+    max-height: 220px;
+    flex-shrink: 0;
 }
 
 /* ============================================
@@ -411,12 +417,20 @@ button {
 .about {
     padding: var(--spacing-xxl) 0;
     background: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about .container {
+    width: 100%;
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    width: 100%;
 }
 
 .about-text h3 {
@@ -467,6 +481,13 @@ button {
 .skills {
     padding: var(--spacing-xxl) 0;
     background: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.skills .container {
+    width: 100%;
 }
 
 .skills-grid {
@@ -475,6 +496,7 @@ button {
     gap: var(--spacing-lg);
     max-width: 1000px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .skill-category {
@@ -558,12 +580,20 @@ button {
 .projects {
     padding: var(--spacing-xxl) 0;
     background: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.projects .container {
+    width: 100%;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-xl);
+    width: 100%;
 }
 
 .project-card {
@@ -676,6 +706,13 @@ button {
 .contact {
     padding: var(--spacing-xxl) 0;
     background: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact .container {
+    width: 100%;
 }
 
 .contact-content {
@@ -683,6 +720,7 @@ button {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
     align-items: start;
+    width: 100%;
 }
 
 .contact-info h3 {
@@ -828,6 +866,27 @@ button {
 /* ============================================
    ANIMACIONES
    ============================================ */
+
+/* Cursor de escritura */
+.cursor {
+    color: var(--accent-color);
+    font-weight: var(--font-weight-normal);
+    animation: blink 1s infinite;
+}
+
+.cursor.blinking {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;

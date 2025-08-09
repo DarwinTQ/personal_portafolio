@@ -1,4 +1,4 @@
-// ============================================
+
 // SISTEMA DE TRADUCCIÓN PARA EL PORTAFOLIO
 // ============================================
 
@@ -18,7 +18,12 @@ function Translate() {
             var elem = allDom[i];
             var key = elem.getAttribute(this.attribute);
             if (key != null) {
-                elem.innerHTML = langObject[key];
+                // Manejo especial para el h1 con efecto de escritura
+                if (elem.tagName === 'H1' && key === 'hero_hello') {
+                    this.updateHeroTitle(elem, langObject[key]);
+                } else {
+                    elem.innerHTML = langObject[key];
+                }
             }
             
             // Traducir placeholders
@@ -27,6 +32,23 @@ function Translate() {
                 elem.setAttribute('placeholder', langObject[placeholderKey]);
             }
         }
+    }
+    
+    this.updateHeroTitle = function(element, text) {
+        // Extraer las partes del texto
+        var parts = text.split('Darwin Turpo');
+        var textParts = [
+            { text: parts[0], isHighlight: false },
+            { text: 'Darwin Turpo', isHighlight: true }
+        ];
+        
+        // Si hay texto después del nombre, agregarlo
+        if (parts[1]) {
+            textParts.push({ text: parts[1], isHighlight: false });
+        }
+        
+        // Reiniciar el efecto de escritura
+        new OneTimeTypeWriter(element, textParts, { typeSpeed: 80 });
     }
 }
 
@@ -41,7 +63,7 @@ var translations = {
         "nav_contact": "Contact",
 
         // Hero Section
-        "hero_hello": "Hi, I'm <span class=\"highlight\">Darwin Turpo</span>",
+        "hero_hello": "Hi, I'm Darwin Turpo",
         "hero_title": "Full Stack Web Developer",
         "hero_description": "Creating incredible digital experiences with clean code and modern designs.",
         "hero_projects": "View Projects",
@@ -97,7 +119,7 @@ var translations = {
         "nav_contact": "Contacto",
 
         // Hero Section
-        "hero_hello": "Hola, soy <span class=\"highlight\">Darwin Turpo</span>",
+        "hero_hello": "Hola, soy Darwin Turpo",
         "hero_title": "Desarrollador Web Full Stack",
         "hero_description": "Creando experiencias digitales increíbles con código limpio y diseños modernos.",
         "hero_projects": "Ver Proyectos",
@@ -211,6 +233,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updateLanguageButtons(savedLang);
     } else {
         updateLanguageButtons(defaultLang);
+        // Inicializar el efecto de escritura para el idioma por defecto
+        translator.process();
     }
 });
 
