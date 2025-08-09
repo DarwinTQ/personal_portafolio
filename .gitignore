@@ -1,0 +1,467 @@
+# ============================================
+# ARCHIVOS Y CARPETAS A IGNORAR EN GIT
+# ============================================
+
+# ============================================
+# ARCHIVOS DE SISTEMA OPERATIVO
+# ============================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# EDITORES E IDEs
+# ============================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+[._]*.s[a-v][a-z]
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+*~
+tags
+[._]*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# JetBrains IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+.com.apple.timemachine.supported
+
+# ============================================
+# ARCHIVOS DE DESARROLLO
+# ============================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+pids
+*.pid
+*.seed
+*.pid.lock
+.grunt
+lib-cov
+coverage/
+.nyc_output/
+.node_repl_history
+*.tgz
+.yarn-integrity
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.cache/
+.parcel-cache/
+.next
+out
+build
+dist
+.nuxt
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.nox/
+.coverage
+.pytest_cache/
+htmlcov/
+.webassets-cache
+.scrapy
+docs/_build/
+.pybuilder/
+target/
+.jupyter
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+.python-version
+pipfile.lock
+poetry.lock
+.pdm.toml
+__pypackages__/
+celerybeat-schedule
+celerybeat.pid
+*.sage.py
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.spyderproject
+.spyproject
+.ropeproject
+.mr.developer.id
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# ============================================
+# ARCHIVOS TEMPORALES Y COMPILADOS
+# ============================================
+
+# Archivos de respaldo
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+
+# Archivos compilados y minificados
+*.min.css
+*.min.js
+*.css.map
+*.js.map
+*.min.css.map
+*.min.js.map
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# ARCHIVOS DE CONFIGURACIÓN SENSIBLES
+# ============================================
+
+# Variables de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example
+
+# Configuración de base de datos
+config/database.yml
+config/secrets.yml
+
+# Claves API y credenciales
+*.key
+*.pem
+*.p12
+*.p8
+*.pfx
+config.json
+credentials.json
+service-account.json
+
+# ============================================
+# ARCHIVOS MULTIMEDIA GRANDES
+# ============================================
+
+# Archivos de imagen grandes (sin comprimir)
+*.psd
+*.ai
+*.eps
+*.raw
+*.cr2
+*.nef
+*.orf
+*.sr2
+
+# Videos y audio
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.m4v
+*.mp3
+*.wav
+*.flac
+*.aac
+
+# Archivos ZIP y comprimidos grandes
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.tar.gz
+*.tgz
+
+# ============================================
+# ARCHIVOS ESPECÍFICOS DEL PORTAFOLIO
+# ============================================
+
+# Archivos originales de diseño (mantener solo versiones optimizadas)
+assets/images/originals/
+assets/images/*.psd
+assets/images/*.ai
+assets/images/*.sketch
+
+# Documentos personales sensibles
+assets/documents/cv-completo.pdf
+assets/documents/personal/
+assets/documents/*.docx
+assets/documents/*.doc
+
+# Archivos de desarrollo y testing
+test/
+tests/
+*.test.js
+*.spec.js
+coverage/
+
+# Carpetas de build y generados
+build/
+dist/
+public/
+.cache/
+
+# Archivos de análisis y métricas
+analytics/
+reports/
+*.report
+lighthouse-report.html
+
+# ============================================
+# HERRAMIENTAS DE DESARROLLO WEB
+# ============================================
+
+# Sass/SCSS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Less
+*.less.map
+
+# Stylus
+*.styl.map
+
+# PostCSS
+postcss.config.js
+
+# Webpack
+webpack.config.js
+.webpack/
+
+# Parcel
+.parcel-cache/
+
+# Rollup
+rollup.config.js
+
+# Gulp
+gulpfile.js
+
+# Grunt
+gruntfile.js
+
+# ============================================
+# SERVICIOS DE HOSTING Y CI/CD
+# ============================================
+
+# Netlify
+.netlify/
+netlify.toml
+
+# Vercel
+.vercel/
+vercel.json
+
+# Firebase
+.firebase/
+firebase.json
+.firebaserc
+
+# GitHub Actions (mantener solo los necesarios)
+# .github/
+
+# ============================================
+# ARCHIVOS DE MÉTRICAS Y ANALYTICS
+# ============================================
+
+# Google Analytics
+ga-config.js
+
+# Hotjar
+hotjar-config.js
+
+# Archivos de métricas locales
+metrics/
+performance-reports/
+
+# ============================================
+# COMENTARIOS Y NOTAS
+# ============================================
+
+# Archivos de notas personales
+notes.md
+TODO.md
+NOTES.md
+ideas.txt
+*.notes
+
+# Archivos de respaldo de configuración
+*.backup
+*.old
+*.orig
+
+# ============================================
+# ARCHIVOS ESPECÍFICOS POR FRAMEWORK
+# ============================================
+
+# React
+.eslintcache
+
+# Vue.js
+.vuepress/
+.temp/
+
+# Angular
+.angular/
+
+# Svelte
+.svelte-kit/
+
+# ============================================
+# REGLAS ESPECÍFICAS PARA MANTENER
+# ============================================
+
+# Mantener archivos README en carpetas importantes
+!README.md
+!*/README.md
+
+# Mantener archivos de configuración esenciales
+!package.json
+!.gitignore
+
+# Mantener estructura de carpetas vacías
+!.gitkeep
+
+# ============================================
+# ARCHIVOS DE EJEMPLO A IGNORAR
+# ============================================
+
+# Archivos de muestra que no van a producción
+example/
+examples/
+sample/
+samples/
+demo/
+demos/
+
+# ============================================
+# FIN DEL GITIGNORE
+# ============================================

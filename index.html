@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Darwin Turpo</title>
+    <meta name="description" content="Portafolio profesional de Darwin Turpo - Desarrollador Full Stack especializado en Java, Python, PHP, Laravel y más">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="#home">Darwin Turpo</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" data-translate="nav_home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-translate="nav_about">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link" data-translate="nav_skills">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link" data-translate="nav_projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-translate="nav_contact">Contacto</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+
+    <main>
+
+        <!-- Hero Section -->
+         
+         
+        <section id="home" class="hero">
+            <!-- Language Bar -->
+    <div class="language">
+        <a class="nav-link js-scroll-trigger lng" id="enTranslator" href="javascript:void(0);" style="color: rgb(85, 148, 214);">EN</a>
+        <a class="nav-link js-scroll-trigger lng" id="esTranslator" href="javascript:void(0);" style="margin-left: 5px; color: rgb(255, 255, 255);">ES</a>
+    </div>
+            <div class="hero-content">
+                <h1 data-translate="hero_hello">Hola, soy <span class="highlight">Darwin Turpo</span></h1>
+                <h2 data-translate="hero_title">Desarrollador Web Full Stack</h2>
+                <p data-translate="hero_description">Creando experiencias digitales increíbles con código limpio y diseños modernos.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-translate="hero_projects">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn-secondary" data-translate="hero_contact">Contactarme</a>
+                </div>
+            </div>
+            
+                    <!-- MOUSE SCROLL -->
+             <div class="bottom">
+                <a href="#about">
+                 <div class="mouse-icon">
+                        <div class="scroll"></div>
+                </div>
+                </a>
+             </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="hero-image">
+                <img src="assets/images/foto_Carnetdarwin.jfif" alt="Foto de perfil" id="profile-img">
+            </div>
+            <div class="container">
+                <h2 class="section-title" data-translate="about_title">Sobre Mí</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 data-translate="about_hello">¡Hola! Soy Darwin, desarrollador Full Stack</h3>
+                        <p data-translate="about_description">Especializado en desarrollo web con sólida experiencia en Java, Python, PHP y Laravel. Me apasiona crear soluciones tecnológicas robustas y escalables, combinando frontend moderno con backends eficientes. Experto en bases de datos Oracle SQL y control de versiones con Git.</p>
+                        <a href="assets/documents/cv.pdf" class="btn btn-primary" download data-translate="about_cv">
+                            <i class="fas fa-download"></i> Descargar CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title" data-translate="skills_title">Mis Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-translate="skills_frontend">Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-translate="skills_backend">Backend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-translate="skills_tools">Frameworks & Tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-laravel"></i>
+                                <span>Laravel</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="82"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>Oracle SQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="78"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title" data-translate="projects_title">Mis Proyectos</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/projects/project1.jpg" alt="Proyecto 1">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-translate="project1_title">Proyecto 1</h3>
+                            <p data-translate="project1_description">Descripción del proyecto y tecnologías utilizadas.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/projects/project2.jpg" alt="Proyecto 2">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-translate="project2_title">Proyecto 2</h3>
+                            <p data-translate="project2_description">Descripción del proyecto y tecnologías utilizadas.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/projects/project3.jpg" alt="Proyecto 3">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-translate="project3_title">Proyecto 3</h3>
+                            <p data-translate="project3_description">Descripción del proyecto y tecnologías utilizadas.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" data-translate="contact_title">Contacto</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3 data-translate="contact_connect">¡Conectemos!</h3>
+                        <p data-translate="contact_description">¿Tienes un proyecto en mente o quieres colaborar? No dudes en contactarme.</p>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4 data-translate="contact_email">Email</h4>
+                                    <p>darwin.turpo17@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4 data-translate="contact_phone">Teléfono</h4>
+                                    <p>+51 957565165</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4 data-translate="contact_location">Ubicación</h4>
+                                    <p>Perú</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/darwin-turpo-813083313/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/DarwinTQ" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/poulmills/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" data-translate-placeholder="form_name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" data-translate-placeholder="form_email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" data-translate-placeholder="form_subject" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" data-translate-placeholder="form_message" placeholder="Tu mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-translate="form_send">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-translate="footer_copyright">&copy; 2025 Darwin Turpo. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#home" data-translate="nav_home">Inicio</a>
+                <a href="#about" data-translate="nav_about">Sobre Mí</a>
+                <a href="#projects" data-translate="nav_projects">Proyectos</a>
+                <a href="#contact" data-translate="nav_contact">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/translate.js"></script>
+</body>
+</html>
