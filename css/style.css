@@ -395,8 +395,8 @@ button {
 }
 
 #profile-img {
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid rgba(255, 255, 255, 0.2);

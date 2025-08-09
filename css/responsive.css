@@ -117,8 +117,8 @@
     }
     
     #profile-img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         margin: var(--spacing-lg) auto;
         display: block;
         position: static;
@@ -299,8 +299,8 @@
     }
     
     #profile-img {
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
         margin: var(--spacing-md) auto;
         display: block;
         position: static;
