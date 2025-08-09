@@ -80,9 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================
-// PARTÍCULAS ANIMADAS EN EL HERO
+// PARTÍCULAS ANIMADAS EN EL HERO - DESACTIVADO
 // ============================================
 
+/*
 class ParticleSystem {
     constructor(container) {
         this.container = container;
@@ -182,14 +183,15 @@ class ParticleSystem {
     }
 }
 
-// Inicializar sistema de partículas
+// Inicializar sistema de partículas - DESACTIVADO
 document.addEventListener('DOMContentLoaded', () => {
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-        heroSection.style.position = 'relative';
-        new ParticleSystem(heroSection);
-    }
+    // const heroSection = document.querySelector('.hero');
+    // if (heroSection) {
+    //     heroSection.style.position = 'relative';
+    //     new ParticleSystem(heroSection);
+    // }
 });
+*/
 
 // ============================================
 // ANIMACIONES DE SCROLL AVANZADAS
@@ -436,24 +438,23 @@ class LoadingAnimations {
     }
     
     triggerEntryAnimations() {
-        const heroElements = document.querySelectorAll('.hero-content > *');
+        // Solo mantener elementos estáticos sin animaciones de entrada
+        // Exceptuando el título que tiene efecto de escritura
+        const heroElements = document.querySelectorAll('.hero-content > *:not(h2)');
         
-        heroElements.forEach((element, index) => {
-            setTimeout(() => {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }, index * 200);
+        heroElements.forEach((element) => {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
         });
     }
     
     setupPageTransitions() {
-        // Agregar estilos iniciales para elementos del hero
-        const heroElements = document.querySelectorAll('.hero-content > *');
+        // Solo aplicar estilos iniciales a elementos que no sean el título h2
+        const heroElements = document.querySelectorAll('.hero-content > *:not(h2)');
         heroElements.forEach(element => {
             element.style.cssText = `
-                opacity: 0;
-                transform: translateY(50px);
-                transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                opacity: 1;
+                transform: translateY(0);
             `;
         });
     }
