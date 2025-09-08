@@ -496,7 +496,7 @@ class LoadingAnimations {
                 <div class="loader-progress">
                     <div class="loader-bar"></div>
                 </div>
-                <p class="loader-text">Cargando experiencia digital...</p>
+                <p class="loader-text">Cargando...</p>
             </div>
         `;
         

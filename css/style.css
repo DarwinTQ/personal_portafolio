@@ -159,6 +159,12 @@ button {
     color: var(--text-white);
 }
 
+.btn-small {
+    padding: calc(var(--spacing-xs) * 0.8) var(--spacing-md);
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+
 .highlight {
     background: var(--gradient-accent);
     -webkit-background-clip: text;
@@ -256,8 +262,8 @@ button {
    LANGUAGE BAR
    ============================================ */
 .language {
-    position: fixed;
-    top: 80px;
+    position: absolute;
+    top: 90px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -267,7 +273,7 @@ button {
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: 25px;
     box-shadow: var(--shadow-medium);
-    z-index: 999;
+    z-index: 10;
     border: 2px solid rgba(52, 152, 219, 0.2);
     transition: var(--transition-normal);
 }
@@ -347,12 +353,14 @@ button {
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
     z-index: 2;
+    padding: 0 var(--spacing-md);
 }
 
 .hero-content h1 {
@@ -427,6 +435,18 @@ button {
 
 .about .container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about .hero-image {
+    margin-bottom: var(--spacing-lg);
+}
+
+.about .section-title {
+    margin-bottom: var(--spacing-lg);
 }
 
 .about-content {
@@ -608,25 +628,32 @@ button {
     border-radius: var(--border-radius-large);
     overflow: hidden;
     box-shadow: var(--shadow-medium);
-    transition: var(--transition-normal);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-large);
+    /* Forzar que no tenga movimiento */
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
 }
 
 .project-image {
     position: relative;
     overflow: hidden;
     height: 200px;
+    /* Evitar cualquier movimiento */
+    transform: none !important;
+    transition: none !important;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition-slow);
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    /* Propiedades adicionales para forzar que esté estática */
+    position: relative;
+    will-change: auto !important;
+    backface-visibility: hidden;
 }
 
 .project-overlay {
@@ -640,15 +667,42 @@ button {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: var(--transition-normal);
+    transition: opacity var(--transition-normal);
 }
 
 .project-card:hover .project-overlay {
     opacity: 1;
 }
 
-.project-card:hover .project-image img {
-    transform: scale(1.1);
+/* Asegurar que las imágenes permanezcan estáticas */
+.project-card:hover .project-image img,
+.project-image img:hover,
+.project-card .project-image img {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Regla global para evitar cualquier movimiento en la sección de proyectos */
+.projects *,
+.projects *:hover,
+.projects *:focus,
+.projects *:active {
+    transform: none !important;
+    animation: none !important;
+}
+
+/* Solo permitir la transición de opacidad en el overlay */
+.project-overlay {
+    transition: opacity var(--transition-normal) !important;
+}
+
+/* Eliminar cualquier efecto de scroll en las imágenes */
+.project-card,
+.project-image,
+.project-image img {
+    scroll-behavior: auto !important;
+    overscroll-behavior: none !important;
 }
 
 .project-links {
@@ -945,11 +999,11 @@ button {
    MOUSE ICON
    ============================================ */
 .bottom {
-    position: fixed;
-    bottom: 80px;
-    right: 50%;
-    transform: translateX(50%);
-    z-index: 999;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .mouse-icon {

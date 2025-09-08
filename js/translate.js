@@ -72,7 +72,7 @@ var translations = {
         // About Section
         "about_title": "About Me",
         "about_hello": "Hello! I'm Darwin, Full Stack developer",
-        "about_description": "Specialized in web development with solid experience in Java, Python, PHP and Laravel. I'm passionate about creating robust and scalable technological solutions, combining modern frontend with efficient backends. Expert in Oracle SQL databases and version control with Git.",
+        "about_description": "I am a Software Engineering with AI and Telecommunications Engineering student, passionate about continuous learning and exploring new technologies. My goal is to apply my knowledge to develop innovative and efficient solutions that solve complex problems. I really enjoy teamwork, convinced that collaboration is key to creating high-impact projects.",
         "about_cv": "<i class=\"fas fa-download\"></i> Download CV",
 
         // Skills Section
@@ -83,12 +83,14 @@ var translations = {
 
         // Projects Section
         "projects_title": "My Projects",
-        "project1_title": "Project 1",
-        "project1_description": "Project description and technologies used.",
-        "project2_title": "Project 2",
-        "project2_description": "Project description and technologies used.",
-        "project3_title": "Project 3",
-        "project3_description": "Project description and technologies used.",
+        "project1_title": "PeruBank",
+        "project1_description": "Banking system developed in Java with Oracle SQL database for account and transaction management.",
+        "project2_title": "EcoMarket",
+        "project2_description": "Ecological store for selling natural and ecological products developed with modern web technologies.",
+        "project3_title": "Web Scraper UNSA",
+        "project3_description": "Scraper that extracts partial grades from UNSA students and automatically calculates their weighted average.",
+        "project4_title": "Adidas Logistics System",
+        "project4_description": "Product tracking system for users, developed with Laravel and MySQL for efficient logistics management.",
 
         // Contact Section
         "contact_title": "Contact",
@@ -128,7 +130,7 @@ var translations = {
         // About Section
         "about_title": "Sobre Mí",
         "about_hello": "¡Hola! Soy Darwin, desarrollador Full Stack",
-        "about_description": "Especializado en desarrollo web con sólida experiencia en Java, Python, PHP y Laravel. Me apasiona crear soluciones tecnológicas robustas y escalables, combinando frontend moderno con backends eficientes. Experto en bases de datos Oracle SQL y control de versiones con Git.",
+        "about_description": "Soy estudiante de Ingeniería de Software con IA e Ingeniería de Telecomunicaciones, apasionado por el aprendizaje continuo y la exploración de nuevas tecnologías. Mi objetivo es aplicar mis conocimientos para desarrollar soluciones innovadoras y eficientes que resuelvan problemas complejos. Disfruto mucho del trabajo en equipo, convencido de que la colaboración es clave para crear proyectos de gran impacto.",
         "about_cv": "<i class=\"fas fa-download\"></i> Descargar CV",
 
         // Skills Section
@@ -139,12 +141,14 @@ var translations = {
 
         // Projects Section
         "projects_title": "Mis Proyectos",
-        "project1_title": "Proyecto 1",
-        "project1_description": "Descripción del proyecto y tecnologías utilizadas.",
-        "project2_title": "Proyecto 2",
-        "project2_description": "Descripción del proyecto y tecnologías utilizadas.",
-        "project3_title": "Proyecto 3",
-        "project3_description": "Descripción del proyecto y tecnologías utilizadas.",
+        "project1_title": "PeruBank",
+        "project1_description": "Sistema bancario desarrollado en Java con base de datos Oracle SQL para gestión de cuentas y transacciones.",
+        "project2_title": "EcoMarket",
+        "project2_description": "Tienda ecológica de venta de productos naturales y ecológicos desarrollada con tecnologías web modernas.",
+        "project3_title": "Web Scraper UNSA",
+        "project3_description": "Scraper que extrae notas parciales de estudiantes de la UNSA y calcula su promedio ponderado automáticamente.",
+        "project4_title": "Sistema Logística Adidas",
+        "project4_description": "Sistema de seguimiento de productos para usuarios, desarrollado con Laravel y MySQL para gestión logística eficiente.",
 
         // Contact Section
         "contact_title": "Contacto",

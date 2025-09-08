@@ -107,8 +107,8 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observar elementos para animaciones
-document.querySelectorAll('.about, .skill-category, .project-card, .contact-info, .contact-form').forEach(el => {
+// Observar elementos para animaciones (excluyendo project-card para mantenerlas estáticas)
+document.querySelectorAll('.about, .skill-category, .contact-info, .contact-form').forEach(el => {
     observer.observe(el);
 });
 
@@ -128,43 +128,26 @@ function animateSkillBars(skillCategory) {
 }
 
 // ============================================
-// EFECTOS DE PARALLAX SUAVE
+// EFECTOS DE PARALLAX DESHABILITADOS
 // ============================================
 
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroSection = document.querySelector('.hero');
-    
-    if (heroSection) {
-        const parallaxSpeed = scrolled * 0.5;
-        heroSection.style.transform = `translateY(${parallaxSpeed}px)`;
-    }
-});
+// Parallax deshabilitado para mantener todos los elementos estáticos
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const heroSection = document.querySelector('.hero');
+//     
+//     if (heroSection) {
+//         const parallaxSpeed = scrolled * 0.5;
+//         heroSection.style.transform = `translateY(${parallaxSpeed}px)`;
+//     }
+// });
 
 // ============================================
-// EFECTOS HOVER MEJORADOS
+// EFECTOS HOVER MEJORADOS - TARJETAS ESTÁTICAS
 // ============================================
 
-// Efecto de movimiento del mouse en tarjetas de proyecto
-projectCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = (y - centerY) / 10;
-        const rotateY = (centerX - x) / 10;
-        
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
-    });
-});
+// Project cards se mantienen completamente estáticas
+// Todos los efectos de movimiento han sido removidos para mantener las imágenes estáticas
 
 // ============================================
 // FORMULARIO DE CONTACTO
