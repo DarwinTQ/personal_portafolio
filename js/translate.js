@@ -65,7 +65,7 @@ var translations = {
         // Hero Section
         "hero_hello": "Hi there, I'm Darwin Turpo",
         "hero_title": "Full Stack Web Developer",
-        "hero_description": "Creating incredible digital experiences with clean code and modern designs.",
+        "hero_description": "- student ",
         "hero_projects": "View Projects",
         "hero_contact": "Contact Me",
 
@@ -123,7 +123,7 @@ var translations = {
         // Hero Section
         "hero_hello": "Hola, soy Darwin Turpo",
         "hero_title": "Desarrollador Web Full Stack",
-        "hero_description": "Creando experiencias digitales increíbles con código limpio y diseños modernos.",
+        "hero_description": "- Estudiante ",
         "hero_projects": "Ver Proyectos",
         "hero_contact": "Contactarme",
 
