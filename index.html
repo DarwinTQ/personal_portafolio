@@ -62,39 +62,46 @@
          
         <section id="home" class="hero">
             <!-- Language Bar -->
-    <div class="language">
-        <a class="nav-link js-scroll-trigger lng" id="enTranslator" href="javascript:void(0);" style="color: rgb(85, 148, 214);">EN</a>
-        <a class="nav-link js-scroll-trigger lng" id="esTranslator" href="javascript:void(0);" style="margin-left: 5px; color: rgb(255, 255, 255);">ES</a>
-    </div>
+            <div class="language">
+                <a class="nav-link js-scroll-trigger lng" id="enTranslator" href="javascript:void(0);" style="color: rgb(85, 148, 214);">EN</a>
+                <a class="nav-link js-scroll-trigger lng" id="esTranslator" href="javascript:void(0);" style="margin-left: 5px; color: rgb(255, 255, 255);">ES</a>
+            </div>
+            
+            <!-- Hero Content Centrado -->
             <div class="hero-content">
                 <h1 data-translate="hero_hello"></h1>
                 <p data-translate="hero_description">Creando experiencias digitales increíbles con código limpio y diseños modernos.</p>
-
             </div>
             
-                    <!-- MOUSE SCROLL -->
-             <div class="bottom">
+            <!-- MOUSE SCROLL -->
+            <div class="bottom">
                 <a href="#about" class="smooth-scroll">
-                 <div class="mouse-icon">
+                    <div class="mouse-icon">
                         <div class="scroll"></div>
-                </div>
+                    </div>
                 </a>
-             </div>
+            </div>
         </section>
 
 
         <!-- About Section -->
         <section id="about" class="about">
-            <div class="hero-image">
-                <img src="assets/images/foto_Carnetdarwin.jfif" alt="Foto de perfil" id="profile-img">
-            </div>
             <div class="container">
+                <!-- Foto de perfil primero -->
+                <div class="hero-image">
+                    <img src="assets/images/foto_Carnetdarwin.jfif" alt="Foto de perfil" id="profile-img">
+                </div>
+                
+                <!-- Título después de la foto -->
                 <h2 class="section-title" data-translate="about_title">Sobre Mí</h2>
+                
+                <!-- Contenido de texto -->
                 <div class="about-content">
                     <div class="about-text">
-                        <h3 data-translate="about_hello">¡Hola! Soy Darwin, desarrollador Full Stack</h3>
-                        <p data-translate="about_description">Especializado en desarrollo web con sólida experiencia en Java, Python, PHP y Laravel. Me apasiona crear soluciones tecnológicas robustas y escalables, combinando frontend moderno con backends eficientes. Experto en bases de datos Oracle SQL y control de versiones con Git.</p>
-                        <a href="assets/documents/cv.pdf" class="btn btn-primary" download data-translate="about_cv">
+                        <p data-translate="about_description">Soy estudiante de Ingeniería de Software con IA e Ingeniería de Telecomunicaciones, apasionado por el aprendizaje continuo y la exploración de nuevas tecnologías. Mi objetivo es aplicar mis conocimientos para desarrollar soluciones innovadoras y eficientes que resuelvan problemas complejos. Disfruto mucho del trabajo en equipo, convencido de que la colaboración es clave para crear proyectos de gran impacto.</p>
+                        
+                        <!-- Botón CV más pequeño -->
+                        <a href="assets/documents/cv.pdf" class="btn btn-primary btn-small" download data-translate="about_cv">
                             <i class="fas fa-download"></i> Descargar CV
                         </a>
                     </div>
@@ -192,25 +199,50 @@
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
-                <h2 class="section-title" data-translate="projects_title">Mis Proyectos</h2>
+                <h2 class="section-title" data-translate="projects_title">Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/images/projects/project1.jpg" alt="Proyecto 1">
+                            <img src="assets/images/peruBank.png" alt="PeruBank">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="#" target="_blank" class="project-link">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
-                                    <a href="#" target="_blank" class="project-link">
+                                    <a href="https://github.com/DarwinTQ/PeruBank" target="_blank" class="project-link">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 data-translate="project1_title">Proyecto 1</h3>
-                            <p data-translate="project1_description">Descripción del proyecto y tecnologías utilizadas.</p>
+                            <h3 data-translate="project1_title">PeruBank</h3>
+                            <p data-translate="project1_description">Sistema bancario desarrollado en Java con base de datos Oracle SQL para gestión de cuentas y transacciones.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Oracle SQL</span>
+                                <span class="tech-tag">Swing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/ecomarket.png" alt="EcoMarket">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://eco-off.netlify.app/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/DarwinTQ/tienda_virtual_final" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-translate="project2_title">EcoMarket</h3>
+                            <p data-translate="project2_description">Tienda ecológica de venta de productos naturales y ecológicos desarrollada con tecnologías web modernas.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">HTML</span>
                                 <span class="tech-tag">CSS</span>
@@ -221,49 +253,49 @@
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/images/projects/project2.jpg" alt="Proyecto 2">
+                            <img src="assets/images/webscrappermain.png" alt="Web Scraper UNSA">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="#" target="_blank" class="project-link">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
-                                    <a href="#" target="_blank" class="project-link">
+                                    <a href="https://github.com/DarwinTQ/web-scraper-notas-parciales-unsa" target="_blank" class="project-link">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 data-translate="project2_title">Proyecto 2</h3>
-                            <p data-translate="project2_description">Descripción del proyecto y tecnologías utilizadas.</p>
+                            <h3 data-translate="project3_title">Web Scraper UNSA</h3>
+                            <p data-translate="project3_description">Scraper que extrae notas parciales de estudiantes de la UNSA y calcula su promedio ponderado automáticamente.</p>
                             <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Web Scraping</span>
+                                <span class="tech-tag">BeautifulSoup</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/images/projects/project3.jpg" alt="Proyecto 3">
+                            <img src="assets/images/adidas_main.png" alt="Sistema Logística Adidas">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="#" target="_blank" class="project-link">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
-                                    <a href="#" target="_blank" class="project-link">
+                                    <a href="https://github.com/DarwinTQ/adidas_laravel" target="_blank" class="project-link">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 data-translate="project3_title">Proyecto 3</h3>
-                            <p data-translate="project3_description">Descripción del proyecto y tecnologías utilizadas.</p>
+                            <h3 data-translate="project4_title">Sistema Logística Adidas</h3>
+                            <p data-translate="project4_description">Sistema de seguimiento de productos para usuarios, desarrollado con Laravel y MySQL para gestión logística eficiente.</p>
                             <div class="project-tech">
-                                <span class="tech-tag">Vue.js</span>
-                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
                                 <span class="tech-tag">MySQL</span>
                             </div>
                         </div>
@@ -302,7 +334,7 @@
                             <a href="https://www.instagram.com/poulmills/" target="_blank"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-                    <form class="contact-form" id="contact-form">
+                    <!-- <form class="contact-form" id="contact-form">
                         <div class="form-group">
                             <input type="text" id="name" name="name" data-translate-placeholder="form_name" placeholder="Tu nombre" required>
                         </div>
@@ -318,7 +350,7 @@
                         <button type="submit" class="btn btn-primary" data-translate="form_send">
                             <i class="fas fa-paper-plane"></i> Enviar Mensaje
                         </button>
-                    </form>
+                    </form> -->
                     
                 </div>
             </div>
