@@ -322,43 +322,47 @@ images.forEach(img => imageObserver.observe(img));
 // ============================================
 
 function initializeTheme() {
-    const themeToggle = document.querySelector('.theme-toggle');
-    if (!themeToggle) return;
+    const themeToggle = document.createElement('button');
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    themeToggle.className = 'theme-toggle';
+    themeToggle.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-shadow: var(--shadow-large);
+        z-index: 1000;
+        transition: var(--transition-normal);
+    `;
     
-    const themeIcon = themeToggle.querySelector('i');
+    document.body.appendChild(themeToggle);
     
-    // Obtener tema guardado del localStorage o usar 'light' por defecto
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    // Detectar preferencia del sistema
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
     
-    // Aplicar tema inicial
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme, themeIcon);
-    
-    // Event listener para el botón de cambio de tema
     themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.body.classList.toggle('dark-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+        themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         
-        // Aplicar nuevo tema
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme, themeIcon);
-        
-        // Animación suave
-        themeToggle.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            themeToggle.style.transform = 'scale(1)';
-        }, 150);
+        // Guardar preferencia
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
-}
-
-function updateThemeIcon(theme, iconElement) {
-    if (theme === 'dark') {
-        iconElement.className = 'fas fa-sun';
-        iconElement.parentElement.title = 'Cambiar a tema claro';
-    } else {
-        iconElement.className = 'fas fa-moon';
-        iconElement.parentElement.title = 'Cambiar a tema oscuro';
+    
+    // Cargar preferencia guardada
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
 }
 
