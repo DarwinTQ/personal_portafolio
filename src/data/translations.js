@@ -52,7 +52,7 @@ export const translations = {
     contact_location: 'Peru',
     contact_cta: 'Send me an email',
 
-    footer_rights: '© 2025 Darwin Turpo. All rights reserved.',
+    footer_rights: '© 2026 Darwin Turpo. All rights reserved.',
   },
   es: {
     nav_home: 'Inicio',
@@ -107,6 +107,6 @@ export const translations = {
     contact_location: 'Perú',
     contact_cta: 'Envíame un email',
 
-    footer_rights: '© 2025 Darwin Turpo. Todos los derechos reservados.',
+    footer_rights: '© 2026 Darwin Turpo. Todos los derechos reservados.',
   },
 }
