@@ -41,7 +41,7 @@ export default function About() {
 
             <div>
               <a
-                href="/documents/CVF.pdf"
+                href="/documents/resume.pdf"
                 download
                 className="btn btn-primary"
               >
